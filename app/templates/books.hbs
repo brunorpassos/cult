@@ -1,8 +1,10 @@
 <h2>Livros Disponíveis</h2>
 <p>Espero que você encontre o livro que está procurando.</p>
 
-{{#each model as |bookUnit|}}
-  {{book-listing
+<div class="d-flex justify-content-between flex-wrap">
+  {{#each model as |bookUnit|}}
+    {{book-listing
     book=bookUnit
-  }}
-{{/each}}
+    }}
+  {{/each}}
+</div>
