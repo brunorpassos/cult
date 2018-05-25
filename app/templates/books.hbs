@@ -1,0 +1,14 @@
+<h2>Livros Disponíveis</h2>
+<p>Espero que você encontre o livro que está procurando.</p>
+
+{{#each model as |book|}}
+  <article class="listing">
+    <h3>{{book.title}}</h3>
+    <div class="detail owner">
+      <span>Autor:</span> {{book.author}}
+    </div>
+    <div class="detail type">
+      <span>Proprietário:</span> {{book.owner}}
+    </div>
+  </article>
+{{/each}}
