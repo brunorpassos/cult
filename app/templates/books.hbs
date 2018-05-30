@@ -2,7 +2,12 @@
 <p>Espero que você encontre o livro que está procurando.</p>
 
 <div class="d-flex justify-content-between flex-wrap">
-  {{#each model as |bookUnit|}}
-    {{book-listing book=bookUnit}}
-  {{/each}}
+  {{#book-filter
+      filter=(action 'filterByTitle')
+      as |filteredResults|
+  }}
+    {{#each filteredResults as |bookUnit|}}
+      {{book-listing book=bookUnit}}
+    {{/each}}
+  {{/book-filter}}
 </div>
